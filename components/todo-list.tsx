@@ -47,7 +47,9 @@ export default function TodoList({ todos }: TodoListProps) {
             <input
               type="checkbox"
               checked={todo.isCompleted}
-              onChange={() => startTransition(() => toggleTodoAction(todo.id, todo.isCompleted))}
+              onChange={() => startTransition(() => {
+                void toggleTodoAction(todo.id, todo.isCompleted);
+              })}
               className="h-4 w-4 rounded border-slate-700 bg-slate-800 text-blue-600 focus:ring-blue-500"
             />
 
@@ -100,7 +102,9 @@ export default function TodoList({ todos }: TodoListProps) {
                   Edit
                 </button>
                 <button
-                  onClick={() => startTransition(() => deleteTodoAction(todo.id))}
+                  onClick={() => startTransition(() => {
+                    void deleteTodoAction(todo.id);
+                  })}
                   className="p-1 text-xs text-slate-400 hover:text-red-400 font-medium transition-colors"
                 >
                   Delete

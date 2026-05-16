@@ -21,12 +21,12 @@ export default async function TodosPage() {
         {/* Header Block */}
         <header className="flex justify-between items-center border-b border-slate-800 pb-6">
           <div>
-            <h1 className="text-3xl font-bold tracking-tight bg-gradient-to-r from-white via-slate-200 to-slate-400 bg-clip-text text-transparent">
+            <h1 className="text-3xl font-bold tracking-tight bg-linear-to-r from-white via-slate-200 to-slate-400 bg-clip-text text-transparent">
               My Workspace
             </h1>
             <p className="text-sm text-slate-400">Manage your high-performance application queue</p>
           </div>
-          <UserButton afterSignOutUrl="/" />
+          <UserButton />
         </header>
 
         {/* Content Flow Architecture */}
